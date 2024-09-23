@@ -1,0 +1,280 @@
+/* font page css */
+.category-list {
+    margin: 123px auto;
+}
+
+.content-list {
+    margin-bottom: 123px;
+}
+
+.catagory-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+img.darker {
+    transition: all 0.2s ease-in-out;
+}
+
+.cata-btn {
+    visibility: hidden;
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    left: 5%;
+    bottom: 5%;
+}
+
+.catagory-container:hover>.cata-btn {
+    visibility: visible;
+}
+
+.catagory-container:hover>img.darker {
+    filter: brightness(50%);
+}
+
+.h3-main {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.p-main {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.product-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px
+}
+
+.card {
+    border: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img {
+    height: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card-hodder {
+    margin-top: 50px;
+}
+
+.card-list {
+    padding: 0;
+    display: grid;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-des {
+    padding-top: 38px;
+}
+
+.card-cata {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.card-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card-title a {
+    text-transform: uppercase;
+}
+
+.card-price {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.card-old-price {
+    text-decoration-line: line-through;
+}
+
+.card-new-price {
+    color: red;
+}
+
+.avone-banner {
+    border-bottom: 1px solid #000;
+    padding: 3px;
+}
+
+.avone-second-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top: 27px solid #fff;
+    border-left: 27px solid #fff;
+    width: 40%;
+    height: 40%;
+}
+
+#banner2 {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner-des2 {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+/* category page css */
+.category-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    margin: 20px;
+}
+
+.category-pagination a {
+    font-size: 15px !important;
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+.post-category-item {
+    display: flex;
+    justify-content: center;
+}
+
+.post-category-item-wrap {
+    display: list-item;
+}
+
+.post-category-item-wrap li {
+    border-top: 1px solid rgba(46, 45, 45, 0.2);
+    display: flex;
+    margin-top: 50px;
+}
+
+.post-category-item-wrap li>a {
+    margin: 7px;
+    border: 2px solid;
+}
+
+.post-category-item-wrap-gridview {
+    justify-content: center;
+    gap: 20px;
+}
+
+.post-category-item-wrap-gridview li>a {
+    margin: 7px;
+    border: 2px solid;
+}
+
+.post-category-item-wrap-gridview li {
+    border: 1px solid rgba(46, 45, 45, 0.2);
+    display: flex;
+    margin-top: 50px;
+}
+
+/* blog template css*/
+.remain-post {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* shop template css*/
+.product-filter {
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background-color: #ededed;
+    border-radius: 10px;
+}
+
+/* Product template css */
+.product-list-category {
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    width: fit-content;
+    padding: 0px 3px;
+}
+.product-list-category:hover{
+    background-color: #000;
+}
+.product-list-category:hover a{
+    color: #fff !important;
+}
+.btn-add-cart{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    color: #fff !important;
+    background:black;
+}
+.btn-add-cart:hover{
+    color:black !important;
+    border: 1px solid gray;
+}
+
+/* contact template css */
+.contact-wrap{
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.contact-wrap p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.contact-button{
+    border:1px solid gray;
+}
+.contact-button:hover {
+    background-color: #000;
+    color: #fff;
+}

@@ -1,0 +1,179 @@
+.text-footer{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+.text-footer p{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text-footer p br{
+    display: none;
+}
+.location-link:hover{
+    color: blueviolet;
+}
+#button-addon2 {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+.footer-brands a:hover{
+    color: blueviolet;
+}
+.text-footer p .wpcf7-form-control-wrap{
+    width: 100%;
+}
+.input-email{
+    border: 1px solid #EAF0F4;
+    border-right: 0px;
+    border-radius: 0;
+}
+.btn-email{
+    background-color: #fff;
+    border: 1px solid #EAF0F4;
+    border-left: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 0;
+}
+.footer-container{
+    display: grid;
+    padding-top: 123px;
+    padding-bottom: 90px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 100px;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    gap:20px
+}
+.menu-footer-wrap{
+    display:flex;
+    justify-content: left;
+    gap: 15%;
+}
+.footer-menu ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.footer-menu ul li:hover > a {
+    color: blueviolet;
+    text-decoration-line: underline;
+}
+@media only screen and (max-width: 992px) {
+    #navbar{
+        display: none;
+    }
+    #menu-dropd-down{
+        display: flex   ;
+    }
+    .avone-banner{
+        font-size:10px;
+    }
+    p{
+        font-size: 12px;
+    }
+    a{
+        font-size: 12px;
+    }
+    .cata-btn{
+        font-size: 12px;
+    }
+    .category-list{
+        margin: 68px auto;
+    }
+    .content-list{
+        margin-bottom: 68px;
+    }
+    .glide{
+        height: 40vh !important;
+    }
+    .glide__slide{
+        height: 40vh !important;
+    }
+    .post-category-item-wrap-gridview li{
+        width: 100%;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-shrink: 1;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .banner-des{
+        padding-left: 25%;
+        padding-top: 30%;
+        padding-bottom: 5%;
+    }
+    .glide{
+        height: 60vh ;
+    }
+    .glide__slide{
+        height: 60vh ;
+    }
+    .menu-footer-wrap{
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    #navbar{
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .footer-container{
+        display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 100px;
+    }
+    #footer-left{
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-des{
+        padding-left: 5%;
+        padding-top: 30%;
+        padding-bottom: 5%;
+    }
+    .card-des{
+        padding-top: 8px;
+    }
+    .card-cata{
+        font-size: 11px;
+    }
+    .card-title{
+        font-size: 8px;
+    }
+    .card-price{
+        font-size: 8px;
+    }
+    .banner2-title{
+        font-size: 25px !important; 
+    }
+    .banner2-des{
+        font-size: 15px !important;
+    }
+    .footer-form-title{
+        font-size: 20px !important;
+    }
+    .avone-second-img{
+        border-top: 10px solid #fff;
+        border-left: 10px solid #fff;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .avone-banner{
+        font-size:8px;
+    }
+}
