@@ -5,9 +5,6 @@ Template Post Type: product
 */
 
 get_header();
-if (have_posts()):
-    while (have_posts()):
-        the_post();
         $postID = get_the_ID();
         $productName = get_field("product_name", $postID);
         $productID = get_field("product_id", $postID);
@@ -16,8 +13,7 @@ if (have_posts()):
         $productImage = get_field("product_image", $postID);
         $productManufacturer = get_field("manufacturer", $postID);
         $productDescription = get_field("product_des", $postID);
-    endwhile;
-endif;
+        $propductQuantity = get_field("quantity", $postID);
 ?>
 <main style="justify-content: center; display: flex;">
     <div class="container row" style="margin-top: 100px;margin-bottom: 100px;">
@@ -33,13 +29,13 @@ endif;
                 <?php
                 $check = get_field('product_sale_price', $post->ID);
                 if ($check) { ?>
-                    <p class="card-old-price"><span>$</span><?php the_field('product_price', $post->ID); ?></p>
-                    <p class="card-new-price"><span>$</span><?php the_field('product_sale_price', $post->ID); ?>
+                    <p class="card-old-price"><span>$</span><?php echo $productPrice; ?></p>
+                    <p class="card-new-price"><span>$</span><?php echo $productSalePrice; ?>
                     </p>
                     <?php
                 } else { ?>
                     <p class="card-old-price" style="text-decoration-line:none;">
-                        <span>$</span><?php the_field('product_price', $post->ID); ?>
+                        <span>$</span><?php echo $productPrice; ?>
                     </p>
                     <?php
                 }
@@ -48,19 +44,31 @@ endif;
             <p class="poppins-regular"><?php echo $productDescription ?></p>
             <p class="poppins-regular"> Product ID: <?php echo $productID ?></p>
             <p class="poppins-semibold">Categories:</p>
-            <div style="display: flex; gap: 10px">          
+            <div style="display: flex; gap: 10px">
                 <?php
-                 $taxonomy = 'product-category';
-                 $terms = get_object_term_cache( $post->ID, $taxonomy );
-                 foreach($terms as $term) {
-                     if(!empty($term))
-                    echo '<div class="col-md-4 product-list-category"><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></div>'; 
-                 }
+                $taxonomy = 'product-category';
+                $terms = get_object_term_cache($post->ID, $taxonomy);
+                foreach ($terms as $term) {
+                    if (!empty($term))
+                        echo '<div class="col-md-4 product-list-category"><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></div>';
+                }
                 ?>
             </div>
-            <div display="flex">
-                <a href="#" class="btn btn-add-cart poppins-semibold">ADD TO CART</a>  
-            </div>
+            <p class="poppins-semibold">stock: <span class="poppins-regular"><?php echo $propductQuantity ?></span></p>
+            <form display="flex" method="POST">
+                <div data-mdb-input-init class="form-outline" style="width: fit-content;margin-bottom: 20px;">
+                    <label class="form-label" for="typeNumber">Quantity</label> 
+                    <input min="1" max="<?php echo $propductQuantity ?>" type="number" id="typeNumber" name="typeNumber" class="form-control" placeholder="1" oninput="checkMaxValue()"> 
+                </div>
+                <button type="submit" class="btn btn-add-cart poppins-semibold">ADD TO CART</button>
+            </form>
+            <php>
+                <?php
+                $product_id = $postID;
+                $quantity = $_POST['typeNumber'] ?? 1 ?: 1 ;
+                add_to_cart($product_id,$quantity);
+                ?>
+            </php>
         </div>
     </div>
 </main>

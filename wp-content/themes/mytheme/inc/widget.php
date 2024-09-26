@@ -1,4 +1,5 @@
 <?php
+// this file hold all widgget registed in theme
 class footer_widget extends WP_Widget
 {
     function __construct()

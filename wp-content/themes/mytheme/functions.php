@@ -25,8 +25,8 @@ function fashion_register_style()
     wp_enqueue_script('js-bootstrap', get_template_directory_uri() . '/assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js', array(), '', true);
 
     //slider (glide)
-    wp_enqueue_style("slider-glide", get_template_directory_uri() . '/assets/css/glide.core.min.css', array(), "1.0", 'all');
-    wp_enqueue_style("slider-glide-theme", get_template_directory_uri() . '/assets/css/glide.theme.min.css', array(), "1.0", 'all');
+    wp_enqueue_style("slider-glide", get_template_directory_uri() . '/assets/css/glide.core.min.css', array(), "", 'all');
+    wp_enqueue_style("slider-glide-theme", get_template_directory_uri() . '/assets/css/glide.theme.min.css', array(), "", 'all');
     wp_enqueue_script('js-slider-1', 'https://cdn.jsdelivr.net/npm/@glidejs/glide', array(), '', true);
     wp_enqueue_script('js-slider-2', 'https://unpkg.com/@glidejs/glide', array(), '', true);
 
@@ -41,7 +41,7 @@ function fashion_register_style()
     wp_enqueue_style("fashion-footer", get_template_directory_uri() . '/assets/css/footer.css', array(), "1.0", 'all');
 
     //scripts js file
-    wp_enqueue_script('app-js', '/assets/js/app.js', array(), '', true);
+    wp_enqueue_script('app-js', get_template_directory_uri().'/assets/js/app.js', array('jquery'), '', true);
 }
 add_action('wp_enqueue_scripts', 'fashion_register_style');
 
@@ -58,6 +58,7 @@ require INC_DIR . 'codestar.php'; //Theme option from codestar framework
 require INC_DIR . 'hook/product-hook.php';
 require INC_DIR . 'hook/category-hook.php'; //load category template
 require INC_DIR . 'custom-function.php'; //load custom func
+require INC_DIR . 'cart-function.php'; //load custom func
 
 
 //register menu

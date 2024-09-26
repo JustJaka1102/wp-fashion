@@ -36,8 +36,4 @@
 <?php
 wp_footer();
 ?>
-<script>
-    new Glide('.glide').mount()
-</script>
-
 </html>

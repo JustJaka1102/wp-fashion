@@ -1,4 +1,5 @@
 <?php
+//this file hold all csf func
 // csf
 if (class_exists('CSF')) {
     // Set unique slug-like

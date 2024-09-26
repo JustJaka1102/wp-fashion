@@ -50,7 +50,7 @@
                 <div class="subnav-icon"><a href="#" id="item-nav1"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
                 <div class="subnav-icon"><a href="#" id="item-nav2"><i class="fa-regular fa-heart"></i></a></div>
-                <div class="subnav-icon"><a href="#" id="item-nav3"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                <div class="subnav-icon"><a href="<?php echo home_url() . '/cart' ?>" id="item-nav3"><i class="fa-solid fa-cart-shopping"></i></a></div>
             </div>
             <div id="menu-dropd-down">
                 <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"

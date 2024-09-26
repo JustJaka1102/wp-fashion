@@ -1,4 +1,5 @@
 <?php
+// this file add directory for wordpress hierarchy to single product
 function get_new_single_template( $single_template ) {
     global $post;
       $single_template = get_stylesheet_directory() . '/template/single-product.php';

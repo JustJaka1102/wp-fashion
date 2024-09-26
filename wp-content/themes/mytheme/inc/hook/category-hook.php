@@ -1,4 +1,5 @@
 <?php
+//this file locate the template for chossen category
 function load_custom_category_template($template) {
     // Get the current category object
     $category = get_queried_object();
